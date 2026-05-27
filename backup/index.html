@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITAP Pokémon Server</title>
+    <meta name="description" content="Join the ultimate Pokémon experience in Minecraft on the VITAP server featuring the Cobbleverse modpack!">
+    
+    <!-- Google Fonts for Blocky/Pixel aesthetics -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="pokemon-bg-container">
+        <div class="pokemon pikachu"></div>
+        <div class="pokemon charizard"></div>
+        <div class="pokemon gengar"></div>
+        <div class="pokemon dragonite"></div>
+        <div class="pokemon rayquaza"></div>
+    </div>
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="pixel-text bounce">VITAP POK&Eacute;MON SERVER</h1>
+            <p class="subtitle">Experience the ultimate Cobbleverse Modpack.</p>
+            <a href="#play" class="btn primary-btn">PLAY NOW</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="features" class="section block-container">
+            <h2 class="section-title">SERVER FEATURES</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>1000+ POK&Eacute;MON</h3>
+                    <p>Catch 'em all! From Gen 1 to Gen 9, complete your living Pokedex.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>SMART BATTLE HUD</h3>
+                    <p>Real-time catch rates, weather effects, and move tooltips.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>EPIC RAIDS</h3>
+                    <p>Team up with friends for 1-7 Star Raids and earn rare loot.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>CUSTOM GYMS</h3>
+                    <p>Defeat Gym Leaders across custom regions and become the Champion!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="play" class="section block-container alt-bg">
+            <h2 class="section-title">JOIN THE ADVENTURE</h2>
+            <div class="join-container">
+                <div class="server-info box">
+                    <h3>SERVER IP</h3>
+                    <div class="ip-box">
+                        <span id="server-ip">play.vitap-pokemon.net</span>
+                        <button class="btn small-btn" id="copy-btn">COPY</button>
+                    </div>
+                </div>
+                
+                <div class="modpack-info box">
+                    <h3>CLIENT MODS</h3>
+                    <p>You need the Cobbleverse modpack to join.</p>
+                    <a href="https://modrinth.com/modpack/cobbleverse" target="_blank" class="btn mod-btn">DOWNLOAD MODS</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="seed-map" class="section block-container">
+            <h2 class="section-title">WORLD MAP SEED</h2>
+            <p class="seed-text">Seed: <span class="highlight">4942960352180798556</span></p>
+            <div class="map-container">
+                <iframe src="https://mcseeder.com/?seed=4942960352180798556&version=1.21" title="MCSeeder Map" class="chunkbase-iframe"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="dev-credits">made by <span class="highlight-blue">lost ORCA</span> and <span class="highlight-green">YODA</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
