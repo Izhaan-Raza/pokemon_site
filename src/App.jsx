@@ -7,7 +7,7 @@ import { Copy, Check, Download, Swords, Globe2, Shield, Users } from 'lucide-rea
 
 function App() {
   const [copied, setCopied] = useState(false);
-  const serverIp = "wrecking-qualifications.gl.joinmc.link";
+  const serverIp = "play.pokevita.qzz.io";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(serverIp).then(() => {
@@ -108,7 +108,8 @@ function App() {
               <div>
                 <h3>Client Mods</h3>
                 <p className="subtitle" style={{ fontSize: '1rem', marginTop: '0.5rem', marginBottom: '1.5rem' }}>
-                  Download the required modpack to join the server.
+                  Download the required modpack to join the server.<br/>
+                  <span style={{ color: '#fff', fontWeight: 600 }}>Minecraft Version:</span> 1.21.1 (Forge)
                 </p>
               </div>
               <a href="https://github.com/Izhaan-Raza/pokemon_site/raw/main/public/MODS.7z" download className="btn btn-outline" style={{ width: '100%' }}>
