@@ -111,7 +111,7 @@ function App() {
                   Download the required modpack to join the server.
                 </p>
               </div>
-              <a href="/MODS.7z" download className="btn btn-outline" style={{ width: '100%' }}>
+              <a href="https://github.com/Izhaan-Raza/pokemon_site/raw/main/public/MODS.7z" download className="btn btn-outline" style={{ width: '100%' }}>
                 <Download size={20} />
                 Download Modpack
               </a>
