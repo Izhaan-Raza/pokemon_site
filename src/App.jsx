@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './index.css';
 import ASCIIText from './components/ASCIIText';
 import Ballpit from './components/Ballpit';
@@ -7,7 +7,14 @@ import { Copy, Check, Download, Swords, Globe2, Shield, Users } from 'lucide-rea
 
 function App() {
   const [copied, setCopied] = useState(false);
+  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 768 : false);
   const serverIp = "play.pokevita.qzz.io";
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(serverIp).then(() => {
@@ -21,7 +28,7 @@ function App() {
       <CustomCursor />
       <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100vh', zIndex: -1 }}>
         <Ballpit
-          count={200}
+          count={isMobile ? 70 : 200}
           gravity={0}
           friction={1}
           wallBounce={1}
@@ -31,10 +38,10 @@ function App() {
       </div>
         <header className="hero">
         <div className="hero-content">
-          <div style={{ height: '300px', width: '100vw', maxWidth: '1200px', position: 'relative' }}>
-            <ASCIIText text="VITAP POKEMON" textFontSize={150} asciiFontSize={8} enableWaves={true} />
+          <div className="ascii-container">
+            <ASCIIText text="VITAP POKEMON" textFontSize={isMobile ? 80 : 150} asciiFontSize={isMobile ? 5 : 8} enableWaves={true} />
           </div>
-          <p className="subtitle" style={{ marginTop: '-4rem' }}>Experience the ultimate Cobbleverse Modpack.</p>
+          <p className="subtitle hero-subtitle">Experience the ultimate Cobbleverse Modpack.</p>
           <a href="#play" className="btn btn-primary">
             <Swords size={20} />
             Start Playing
